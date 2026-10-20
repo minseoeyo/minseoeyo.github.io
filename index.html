@@ -27,6 +27,11 @@
     .links { display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin:20px 0 0; font-size:14px; }
     .links a { font-weight:600; }
     .hero { padding-bottom:26px; }
+    .hero-profile { display:flex; align-items:center; justify-content:space-between; gap:34px; }
+    .hero-intro { flex:1; min-width:0; }
+    .profile-photo { width:174px; height:216px; flex-shrink:0; object-fit:cover; object-position:center 36%; border-radius:12px; border:1px solid var(--line); background:var(--soft); box-shadow:0 8px 25px rgba(29,42,55,.07); }
+    @media (max-width:640px) { .hero-profile { gap:18px; align-items:flex-start; } .profile-photo { width:112px; height:140px; border-radius:9px; } .hero-intro h1 { font-size:clamp(30px,8vw,42px); } .hero-intro .lead { font-size:14px; } .hero-intro .eyebrow { font-size:10px; letter-spacing:.08em; } }
+    @media (max-width:390px) { .hero-profile { flex-direction:column-reverse; } .profile-photo { width:132px; height:165px; } }
     .notice { margin-top:26px; background:var(--soft); border-left:3px solid var(--accent); padding:18px 21px; border-radius:0 7px 7px 0; }
     .notice strong { display:block; margin-bottom:5px; }
     .notice p { margin:0; font-size:14px; }
@@ -64,15 +69,20 @@
   </header>
   <main class="wrap" id="top">
     <div class="hero">
-      <div class="eyebrow">Wireless Networks · Open RAN · Distributed Systems</div>
-      <h1>Minseo Kim</h1>
-      <p class="lead">Researcher, Electronics and Telecommunications Research Institute (ETRI)<br>South Korea</p>
-      <div class="links">
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=k108540813%40gmail.com" target="_blank" rel="noopener noreferrer">Email ↗</a>
-        <a href="https://www.linkedin.com/in/minseo-bijou-kim/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/minseoeyo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <!-- Upload your updated academic CV as cv.pdf to enable this link. -->
-        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV (PDF) ↗</a>
+      <div class="hero-profile">
+        <div class="hero-intro">
+          <div class="eyebrow">Wireless Networks · Open RAN · Distributed Systems</div>
+          <h1>Minseo Kim</h1>
+          <p class="lead">Researcher, Electronics and Telecommunications Research Institute (ETRI)<br>South Korea</p>
+          <div class="links">
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=k108540813%40gmail.com" target="_blank" rel="noopener noreferrer">Email ↗</a>
+            <a href="https://www.linkedin.com/in/minseo-bijou-kim/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/minseoeyo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <!-- Upload your updated academic CV as cv.pdf to enable this link. -->
+            <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV (PDF) ↗</a>
+          </div>
+        </div>
+        <img class="profile-photo" src="profile.jpg" alt="Portrait of Minseo Kim" width="174" height="216" fetchpriority="high">
       </div>
       <div class="notice">
         <strong>🚀 Open to Research Collaborations &amp; Opportunities</strong>
@@ -101,7 +111,7 @@
       <article class="pub">
         <h3>O-RAN Near-RT RIC-Based Multi-RAT Bidirectional Traffic Steering between 5G and WiFi</h3>
         <p class="meta"><strong>Minseo Kim</strong> and Hwangjun Song</p>
-        <p class="meta">ACM/IEEE MSWiM, 2026 · Paris, France</p>
+        <p class="meta">ACM MSWiM, 2026 · Paris, France</p>
       </article>
       <article class="pub">
         <h3>Riding the TiDE: Lightweight TIV-Aware Delay Estimation in P2P-Based Decentralized Networks</h3>
